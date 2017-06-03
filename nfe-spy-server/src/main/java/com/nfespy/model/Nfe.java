@@ -19,6 +19,8 @@ public class Nfe {
 
 	private Status status = Status.WAITING;
 
+	private String state;
+
 	public Nfe(final String key) {
 		this.key = key;
 	}
@@ -33,5 +35,9 @@ public class Nfe {
 
 	public void setStatus(final Status status) {
 		this.status = status;
+	}
+
+	public String getState() {
+		return state;
 	}
 }
