@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Nfe {
 
 	public enum Status {
-		WAITING, PROCESSING, PROCESSED, ERROR
+		WAITING, PROCESSING, PROCESSED, ERROR, FAIL
 	}
 
 	@Id

@@ -25,3 +25,15 @@ o
 ?nfe-spy-server/src/main/java/com/nfespy/config/AsyncConfig.java,7/9/798531b487adddfe24787f4e69f17a052626896b
 y
 Infe-spy-server/src/main/java/com/nfespy/config/AsyncConfigProperties.java,f/e/fe16c03396b3350f2b5f46b1d2d1fa35b012b85a
+o
+?nfe-spy-server/src/main/java/com/nfespy/config/StateConfig.java,3/8/388da82ed236c285c926b0e9fde06ae31f3811c9
+v
+Fnfe-spy-server/src/main/java/com/nfespy/parse/AbstractHttpService.java,a/a/aad6fe65025017554e0bc4cbcd7980797b398c3c
+n
+>nfe-spy-server/src/main/java/com/nfespy/parse/HttpService.java,a/6/a6a48530e26d6b5533edcbe33094260824a4fd2f
+k
+;nfe-spy-server/src/main/java/com/nfespy/parse/Nacional.java,9/a/9aef0f681cf5663664e6101aef07b068ca12b444
+m
+=nfe-spy-server/src/main/java/com/nfespy/model/CanonicNfe.java,d/3/d3d7be7c018e246e7dfc542c6f898d51a393a051
+s
+Cnfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java,8/b/8be6bcc30b2fa2d49f618fd1677a8ff7df04ad90

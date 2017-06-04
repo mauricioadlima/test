@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @ConfigurationProperties("state")
 @Component
-public class StateConfig {
+public class StateConfigPropertires {
 
 	private String nacional;
 
