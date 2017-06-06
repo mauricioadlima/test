@@ -1,6 +1,9 @@
 package com.nfespy.site;
 
+import java.util.Objects;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,11 +26,12 @@ public class Nacional extends AbstractHttpService {
 
 	@Override
 	public CanonicNfe getNfe(final String key) {
+		WebDriver driver = getDriver();
 		driver.navigate()
 			  .to(stateConfigPropertires.getNacional());
 		final WebElement image = driver.findElement(By.id(IMAGE_ID));
 		final String src = image.getAttribute("src");
-		final String captcha = brokenCaptcha(src.substring(22));
+		final String captcha = brokenCaptcha(src);
 
 		final WebElement keyInput = driver.findElement(By.id(KEY_ID));
 		keyInput.sendKeys(key);
@@ -38,8 +42,8 @@ public class Nacional extends AbstractHttpService {
 		final WebElement btnSubmit = driver.findElement(By.name(BTN_SUBMIT));
 		btnSubmit.click();
 
-		// TODO
 		LOGGER.info(driver.getPageSource());
+		driver.close();
 		return null;
 	}
 }

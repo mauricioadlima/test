@@ -5,9 +5,11 @@ import org.springframework.stereotype.Component;
 
 @ConfigurationProperties
 @Component
-public class GlobalConfig {
+public class GlobalProperties {
 
 	private String phantomjsBinary;
+
+	private String chromeBinary;
 
 	public String getPhantomjsBinary() {
 		return phantomjsBinary;
@@ -15,5 +17,13 @@ public class GlobalConfig {
 
 	public void setPhantomjsBinary(final String phantomjsBinary) {
 		this.phantomjsBinary = phantomjsBinary;
+	}
+
+	public String getChromeBinary() {
+		return chromeBinary;
+	}
+
+	public void setChromeBinary(final String chromeBinary) {
+		this.chromeBinary = chromeBinary;
 	}
 }
