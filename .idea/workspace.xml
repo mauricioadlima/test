@@ -16,28 +16,40 @@
       <file leaf-file-name="NfeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/NfeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="205">
               <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NfeResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeResource.java">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="33" column="60" lean-forward="true" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+            <state relative-caret-position="129">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NfeRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeRequest.java">
+      <file leaf-file-name="AbstractHttpService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/AbstractHttpService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="304">
+              <caret line="72" column="73" lean-forward="false" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaptchaServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/test/java/com/nfespy/service/CaptchaServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -46,53 +58,9 @@
       <file leaf-file-name="CaptchaService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="156">
+              <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nacional.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/Nacional.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaoPaulo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/SaoPaulo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractHttpService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/AbstractHttpService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,7 +120,6 @@
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/GlobalConfig.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/CaptchaSolutionsProperties.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/model/Captcha.java" />
-        <option value="$PROJECT_DIR$/nfe-spy-server/src/test/java/com/nfespy/service/CaptchaServiceTest.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/exception/CaptchaException.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/GlobalProperties.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.properties" />
@@ -160,7 +127,6 @@
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/State.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/resources/states.yml" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/StateConfig.java" />
-        <option value="$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeResource.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/StateConfigProperties.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/pom.xml" />
@@ -169,10 +135,12 @@
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/model/CanonicNfe.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/NfeService.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/NfeSpyApplication.java" />
-        <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/model/Nfe.java" />
-        <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeRequest.java" />
         <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/AbstractHttpService.java" />
+        <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeRequest.java" />
+        <option value="$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java" />
+        <option value="$PROJECT_DIR$/nfe-spy-server/src/test/java/com/nfespy/service/CaptchaServiceTest.java" />
       </list>
     </option>
   </component>
@@ -187,8 +155,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="37" />
     <option name="y" value="-4" />
-    <option name="width" value="1883" />
-    <option name="height" value="1084" />
+    <option name="width" value="1329" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -322,126 +290,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfespy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfespy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfespy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfe-spy-server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfespy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -479,7 +327,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.nfe-server">
+  <component name="RunManager" selected="JUnit.CaptchaServiceTest.downloadImage">
     <configuration default="false" name="NacionalTest.mustGetImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -571,6 +419,32 @@
       <option name="PACKAGE_NAME" value="com.nfespy.service" />
       <option name="MAIN_CLASS_NAME" value="com.nfespy.service.CaptchaServiceTest" />
       <option name="METHOD_NAME" value="solveByUrl" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CaptchaServiceTest.downloadImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.nfespy.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="nfe-spy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.nfespy.service" />
+      <option name="MAIN_CLASS_NAME" value="com.nfespy.service.CaptchaServiceTest" />
+      <option name="METHOD_NAME" value="downloadImage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -759,19 +633,21 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.nfe-server" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.NacionalTest.mustGetImage" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.solveByBase64" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.solveByUrl" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.downloadImage" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.downloadImage" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.solveByUrl" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.solveByBase64" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NacionalTest.mustGetImage" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CaptchaServiceTest.solveByBase64" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.NacionalTest.mustGetImage" />
       </list>
     </recent_temporary>
   </component>
@@ -789,23 +665,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CaptchaServiceTest - 2017.06.05 at 22h 13m 38s.xml">
+    <history-entry file="CaptchaServiceTest - 2017.06.07 at 00h 02m 47s.xml">
       <configuration name="CaptchaServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CaptchaServiceTest - 2017.06.05 at 22h 19m 35s.xml">
-      <configuration name="CaptchaServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CaptchaServiceTest - 2017.06.05 at 22h 23m 35s.xml">
-      <configuration name="CaptchaServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CaptchaServiceTest - 2017.06.05 at 22h 32m 06s.xml">
-      <configuration name="CaptchaServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CaptchaServiceTest_solveByBase64 - 2017.06.05 at 22h 08m 47s.xml">
-      <configuration name="CaptchaServiceTest.solveByBase64" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CaptchaServiceTest_solveByBase64 - 2017.06.05 at 22h 10m 14s.xml">
-      <configuration name="CaptchaServiceTest.solveByBase64" configurationId="JUnit" />
+    <history-entry file="CaptchaServiceTest_downloadImage - 2017.06.07 at 07h 45m 45s.xml">
+      <configuration name="CaptchaServiceTest.downloadImage" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CaptchaServiceTest_solveByUrl - 2017.06.05 at 22h 25m 49s.xml">
       <configuration name="CaptchaServiceTest.solveByUrl" configurationId="JUnit" />
@@ -819,9 +683,21 @@
     <history-entry file="CaptchaServiceTest_solveByUrl - 2017.06.05 at 22h 27m 59s.xml">
       <configuration name="CaptchaServiceTest.solveByUrl" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CaptchaServiceTest_solveByUrl - 2017.06.07 at 00h 10m 44s.xml">
+      <configuration name="CaptchaServiceTest.solveByUrl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CaptchaServiceTest_solveByUrl - 2017.06.07 at 00h 11m 44s.xml">
+      <configuration name="CaptchaServiceTest.solveByUrl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CaptchaServiceTest_solveByUrl - 2017.06.07 at 00h 25m 22s.xml">
+      <configuration name="CaptchaServiceTest.solveByUrl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CaptchaServiceTest_solveByUrl - 2017.06.07 at 00h 25m 52s.xml">
+      <configuration name="CaptchaServiceTest.solveByUrl" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="-4" width="1883" height="1084" extended-state="6" />
+    <frame x="37" y="-4" width="1329" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -829,11 +705,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48765433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29232445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2720187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -852,21 +728,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="55" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/AbstractHttpService.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/config/CaptchaSolutionsProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -944,16 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/test/java/com/nfespy/service/CaptchaServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1149,26 +1013,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nfe-spy-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/Nacional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1191,22 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="33" column="60" lean-forward="true" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/model/Nfe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1215,22 +1047,6 @@
             <element signature="e#708#709#0" expanded="true" />
             <element signature="e#727#728#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/NfeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,13 +1060,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/Nacional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/api/NfeResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="33" column="60" lean-forward="true" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/NfeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/site/AbstractHttpService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+        <state relative-caret-position="304">
+          <caret line="72" column="73" lean-forward="false" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/test/java/com/nfespy/service/CaptchaServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfe-spy-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

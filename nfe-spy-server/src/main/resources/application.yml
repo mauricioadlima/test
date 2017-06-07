@@ -12,8 +12,8 @@ chrome-binary: /opt/chromedriver
 
 captchasolutions:
   url: http://api.captchasolutions.com/solve
-  key: b13ad944e94b14fe1c32172542928b07
-  secret: 1091e587
+  key: 82b050b284452aa843c590d093ef53d4
+  secret: 6350214c
 
 management:
   context-path: "/actuator"

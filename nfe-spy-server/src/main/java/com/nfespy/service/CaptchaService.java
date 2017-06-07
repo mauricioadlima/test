@@ -1,7 +1,13 @@
 package com.nfespy.service;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
@@ -44,20 +50,34 @@ public class CaptchaService {
 		}
 	}
 
-	private HttpPost getHttpPost(final String urlOrImage) throws UnsupportedEncodingException {
+	private HttpPost getHttpPost(final String urlOrImage) throws IOException {
 		HttpPost post = new HttpPost(captchaSolutionsProperties.getUrl());
 		List<NameValuePair> nvps = new ArrayList<>();
 		if (urlOrImage.startsWith("http")) {
-			nvps.add(new BasicNameValuePair("p", "decode"));
-			nvps.add(new BasicNameValuePair("url", urlOrImage));
+			nvps.add(new BasicNameValuePair("captcha", downloadImage(urlOrImage)));
 		} else {
-			nvps.add(new BasicNameValuePair("p", "base64"));
 			nvps.add(new BasicNameValuePair("captcha", urlOrImage));
 		}
+		nvps.add(new BasicNameValuePair("p", "base64"));
 		nvps.add(new BasicNameValuePair("key", captchaSolutionsProperties.getKey()));
 		nvps.add(new BasicNameValuePair("secret", captchaSolutionsProperties.getSecret()));
 		post.setEntity(new UrlEncodedFormEntity(nvps));
 		return post;
+	}
+
+	public String downloadImage(String imageUrl) throws IOException {
+		URL url = new URL(imageUrl);
+		InputStream in = new BufferedInputStream(url.openStream());
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		byte[] buf = new byte[1024];
+		int n;
+		while (-1 != (n = in.read(buf))) {
+			out.write(buf, 0, n);
+		}
+		out.close();
+		in.close();
+		return Base64.getEncoder()
+					 .encodeToString(out.toByteArray());
 	}
 
 }
