@@ -21,8 +21,9 @@ public class Nfe {
 
 	private String state;
 
-	public Nfe(final String key) {
+	public Nfe(final String key, final String state) {
 		this.key = key;
+		this.state = state;
 	}
 
 	public void setLotId(final UUID lotId) {

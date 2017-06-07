@@ -1,5 +1,5 @@
 
-Fsquid:S1068"*Remove this unused "status" private field.(Ú¹Ê¤8¿—­ôÆ+
-usquid:S1450"TRemove the "lotId" field and declare it as a local variable in the relevant methods.(¸ÍÕ“úÿÿÿÿ8£¶ÀôÆ+
 qsquid:S1450"URemove the "status" field and declare it as a local variable in the relevant methods.(Ú¹Ê¤8€–ºõÆ+
 Jsquid:S1068")Remove this unused "lotId" private field.(¸ÍÕ“úÿÿÿÿ8»±«ôÆ+
+Fsquid:S1068"*Remove this unused "status" private field.(Ú¹Ê¤8¿—­ôÆ+
+usquid:S1450"TRemove the "lotId" field and declare it as a local variable in the relevant methods.(¸ÍÕ“úÿÿÿÿ8£¶ÀôÆ+

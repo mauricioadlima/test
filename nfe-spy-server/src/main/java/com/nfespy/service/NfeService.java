@@ -17,8 +17,8 @@ import org.springframework.stereotype.Service;
 
 import com.nfespy.model.CanonicNfe;
 import com.nfespy.model.Nfe;
-import com.nfespy.site.HttpService;
 import com.nfespy.repository.NfeRepository;
+import com.nfespy.site.HttpService;
 
 @Service
 public class NfeService {
@@ -37,12 +37,12 @@ public class NfeService {
 	public void processNfe(Nfe nfe) {
 		LOGGER.info("Processing nfe {}", nfe.getKey());
 		try {
-			CanonicNfe canonicNfe = getHttpService(NACIONAL).getNfe(nfe.getKey());
-			if (!canonicNfe.wasProcessedOk()) {
-				canonicNfe = getHttpService(nfe.getState()).getNfe(nfe.getKey());
+			CanonicNfe canonicNfe = getHttpService(nfe.getState()).getNfe(nfe.getKey());
+			if (canonicNfe == null) {
+				canonicNfe = getHttpService(NACIONAL).getNfe(nfe.getKey());
 			}
 
-			if (canonicNfe.wasProcessedOk()) {
+			if (canonicNfe != null) {
 				nfe.setStatus(PROCESSED);
 				LOGGER.info("Nfe {} processed with successful", nfe.getKey());
 			} else {

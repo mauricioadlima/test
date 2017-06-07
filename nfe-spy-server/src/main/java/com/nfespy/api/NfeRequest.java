@@ -10,14 +10,23 @@ import com.nfespy.model.Nfe;
 
 class NfeRequest {
 
+	private static final class NfeRequestProperty {
+
+		@JsonProperty
+		private String key;
+
+		@JsonProperty
+		private String state;
+	}
+
 	@JsonProperty
-	private List<String> keys;
+	private List<NfeRequestProperty> nfes;
 
 	List<Nfe> toModel() {
-		return keys == null ?
+		return nfes == null ?
 				EMPTY_LIST :
-				keys.parallelStream()
-					.map(Nfe::new)
+				nfes.parallelStream()
+					.map(p -> new Nfe(p.key, p.state))
 					.collect(toList());
 	}
 }
