@@ -1,6 +1,4 @@
 
-t
-Dnfe-spy-server/src/main/java/com/nfespy/api/HealthCheckResource.java,8/a/8a095621f0935da458d91f39fb46d7af8d6951f7
 n
 >nfe-spy-server/src/main/java/com/nfespy/NfeSpyApplication.java,4/0/40eeeba85d024882fb7d75b97669d00a8c151ec2
 F
@@ -11,8 +9,6 @@ l
 <nfe-spy-server/src/main/java/com/nfespy/api/NfeResponse.java,7/2/725770dd08fb30850f522678087dd55e0fd447dd
 k
 ;nfe-spy-server/src/main/java/com/nfespy/api/NfeRequest.java,8/3/83aa9942d81607ff2f954c8f3f3afc880b1d4e26
-w
-Gnfe-spy-server/src/main/java/com/nfespy/security/WebSecurityConfig.java,2/f/2fe3119be1004af0300362ce1d2326ffb5dbf9da
 m
 =nfe-spy-server/src/main/java/com/nfespy/queue/MongoQueue.java,9/f/9ff3d2ffc3162a92436ffb56db72817a0e2629ad
 u
@@ -31,8 +27,6 @@ s
 Cnfe-spy-server/src/main/java/com/nfespy/service/CaptchaService.java,8/b/8be6bcc30b2fa2d49f618fd1677a8ff7df04ad90
 m
 =nfe-spy-server/src/main/java/com/nfespy/site/HttpService.java,c/4/c4281eccac714b5aef93a3a426d26695cb161a5f
-z
-Jnfe-spy-server/src/main/java/com/nfespy/config/StateConfigPropertires.java,c/7/c77d99b54aa57cd4df4f19155e91c1eaf7664f77
 u
 Enfe-spy-server/src/main/java/com/nfespy/site/AbstractHttpService.java,a/b/abdc95e320a542b70acb9820c9dba512ad065b67
 j
@@ -45,3 +39,7 @@ w
 Gnfe-spy-server/src/test/java/com/nfespy/service/CaptchaServiceTest.java,2/2/22f0f7653bcbf9da8662e0d42b738547767403e3
 t
 Dnfe-spy-server/src/main/java/com/nfespy/config/GlobalProperties.java,f/6/f6bcfafb7f5091a7e386ad3c360055da0c42cf97
+y
+Infe-spy-server/src/main/java/com/nfespy/config/StateConfigProperties.java,8/b/8b48048a7b3cd54f1a62533232e0b990f22c7566
+j
+:nfe-spy-server/src/main/java/com/nfespy/site/SaoPaulo.java,0/f/0f892fab75f74d4c6f1d9461507cd3b050f1428f

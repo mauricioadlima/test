@@ -1,7 +1,7 @@
 package com.nfespy.queue;
 
-import static com.nfespy.model.Nfe.Status.PROCESSING;
-import static com.nfespy.model.Nfe.Status.WAITING;
+import static com.nfespy.entity.NfeEntity.Status.PROCESSANDO;
+import static com.nfespy.entity.NfeEntity.Status.ESPERANDO;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import com.nfespy.model.Nfe;
+import com.nfespy.entity.NfeEntity;
 import com.nfespy.service.NfeService;
 
 @Component
@@ -30,16 +30,16 @@ public class MongoQueue {
 	@Async
 	public void consume() {
 		final Query query = Query.query(Criteria.where("status")
-												.is(WAITING));
+												.is(ESPERANDO));
 
-		final Update update = Update.update("status", PROCESSING);
+		final Update update = Update.update("status", PROCESSANDO);
 		while (true) {
-			final Nfe nfe = mongoTemplate.findAndModify(query, update, Nfe.class);
-			if (nfe != null) {
-				LOGGER.debug("MessageID: {}", nfe.getKey());
-				nfeService.processNfe(nfe);
+			final NfeEntity nfeEntity = mongoTemplate.findAndModify(query, update, NfeEntity.class);
+			if (nfeEntity != null) {
+				LOGGER.debug("Consumindo chave: {}", nfeEntity.getChave());
+				nfeService.processNfe(nfeEntity);
 			} else {
-				LOGGER.debug("All messages was consumed");
+				LOGGER.debug("Todas as mensagens foram consumidas");
 				break;
 			}
 		}

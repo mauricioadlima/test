@@ -1,8 +1,9 @@
 package com.nfespy.site;
 
-import com.nfespy.model.CanonicNfe;
+import com.nfespy.domain.Nfe;
 
 public interface HttpService {
 
-	CanonicNfe getNfe(String key);
+	Nfe getNfe(final String keyValue);
+
 }

@@ -5,10 +5,10 @@ import java.util.UUID;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.nfespy.model.Nfe;
-import com.nfespy.model.Nfe.Status;
+import com.nfespy.entity.NfeEntity;
+import com.nfespy.entity.NfeEntity.Status;
 
-public interface NfeRepository extends MongoRepository<Nfe, String> {
+public interface NfeRepository extends MongoRepository<NfeEntity, String> {
 
-	List<Nfe> findByLotIdAndStatus(UUID lotId, Status status);
+	List<NfeEntity> findByLotIdAndStatus(UUID lotId, Status status);
 }

@@ -1,8 +1,8 @@
 package com.nfespy.service;
 
-import static com.nfespy.model.Nfe.Status.ERROR;
-import static com.nfespy.model.Nfe.Status.FAIL;
-import static com.nfespy.model.Nfe.Status.PROCESSED;
+import static com.nfespy.entity.NfeEntity.Status.ERRO;
+import static com.nfespy.entity.NfeEntity.Status.FALHA;
+import static com.nfespy.entity.NfeEntity.Status.PROCESSADA;
 
 import java.util.Collections;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import com.nfespy.model.CanonicNfe;
-import com.nfespy.model.Nfe;
+import com.nfespy.domain.Nfe;
+import com.nfespy.entity.NfeEntity;
 import com.nfespy.repository.NfeRepository;
 import com.nfespy.site.HttpService;
 
@@ -34,27 +34,27 @@ public class NfeService {
 	private ApplicationContext applicationContext;
 
 	@Async
-	public void processNfe(Nfe nfe) {
-		LOGGER.info("Processing nfe {}", nfe.getKey());
+	public void processNfe(NfeEntity nfeEntity) {
+		LOGGER.info("Processing nfeEntity {}", nfeEntity.getChave());
 		try {
-			CanonicNfe canonicNfe = getHttpService(nfe.getState()).getNfe(nfe.getKey());
-			if (canonicNfe == null) {
-				canonicNfe = getHttpService(NACIONAL).getNfe(nfe.getKey());
+			Nfe nfe = getHttpService(nfeEntity.getEstado()).getNfe(nfeEntity.getChave());
+			if (nfe == null) {
+				nfe = getHttpService(NACIONAL).getNfe(nfeEntity.getChave());
 			}
 
-			if (canonicNfe != null) {
-				nfe.setStatus(PROCESSED);
-				LOGGER.info("Nfe {} processed with successful", nfe.getKey());
+			if (nfe != null) {
+				nfeEntity.setStatus(PROCESSADA);
+				LOGGER.info("NfeEntity {} processed with successful", nfeEntity.getChave());
 			} else {
-				LOGGER.error("Nfe {} cannot be processed", nfe.getKey());
-				nfe.setStatus(FAIL);
+				LOGGER.error("NfeEntity {} cannot be processed", nfeEntity.getChave());
+				nfeEntity.setStatus(FALHA);
 			}
 
 		} catch (Exception ex) {
-			nfe.setStatus(ERROR);
-			LOGGER.error("Nfe {} processed with error", nfe.getKey(), ex);
+			nfeEntity.setStatus(ERRO);
+			LOGGER.error("NfeEntity {} processed with error", nfeEntity.getChave(), ex);
 		} finally {
-			nfeRepository.save(nfe);
+			nfeRepository.save(nfeEntity);
 		}
 	}
 
@@ -63,18 +63,18 @@ public class NfeService {
 											   .getBean(state);
 	}
 
-	public UUID saveAll(final List<Nfe> nfes) {
+	public UUID saveAll(final List<NfeEntity> nfeEntities) {
 		final UUID lotId = UUID.randomUUID();
-		nfes.forEach(nfe -> nfe.setLotId(lotId));
-		nfeRepository.save(nfes);
+		nfeEntities.forEach(nfe -> nfe.setLotId(lotId));
+		nfeRepository.save(nfeEntities);
 		return lotId;
 	}
 
-	public List<Nfe> findByKeyOrLotId(final String key, final UUID lotId) {
+	public List<NfeEntity> findByKeyOrLotId(final String key, final UUID lotId) {
 		if (key != null) {
 			return Collections.singletonList(nfeRepository.findOne(key));
 		}
-		return nfeRepository.findByLotIdAndStatus(lotId, PROCESSED);
+		return nfeRepository.findByLotIdAndStatus(lotId, PROCESSADA);
 	}
 
 }

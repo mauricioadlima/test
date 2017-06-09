@@ -1,5 +1,4 @@
 logging:
-  file: "target/boot-admin-sample.log"
   level:
     ROOT: INFO
 
@@ -12,7 +11,7 @@ chrome-binary: /opt/chromedriver
 
 captchasolutions:
   url: http://api.captchasolutions.com/solve
-  key: 82b050b284452aa843c590d093ef53d4
+  chave: 82b050b284452aa843c590d093ef53d4
   secret: 6350214c
 
 management:
@@ -23,24 +22,11 @@ management:
 spring:
   application:
     name: "@pom.artifactId@"
-  boot:
-    admin:
-      url: http://localhost:8080
-      username: "${security.user.name}"
-      password: "${security.user.password}"
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
-
----
-spring:
-  boot:
-    admin:
-      client:
-        metadata:
-          user.name: "${security.user.name}"
-          user.password:  "${security.user.password}"
----
+  profiles:
+    include: "estados"
 
 security:
   basic:
@@ -52,32 +38,4 @@ security:
   enable-csrf: false
   role: USER
 
-states:
-  nacional:
-    url: https://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8=
-    button:
-      type: id
-      value: ctl00$ContentPlaceHolder1$btnConsultar
-    captcha:
-      type: id
-      value: ctl00_ContentPlaceHolder1_txtCaptcha
-    image:
-      type: id
-      value: ctl00_ContentPlaceHolder1_imgCaptcha
-    key:
-      type: id
-      value: ctl00_ContentPlaceHolder1_txtChaveAcessoCompleta
-  sp:
-    url: https://nfe.fazenda.sp.gov.br/consultanfe/consulta/publica/consultarnfe.aspx
-    button:
-      type: name
-      value: ctl00$ContentMain$btnConsultaCompleta
-    captcha:
-      type: name
-      value: ctl00$ContentMain$tbxCaptcha
-    image:
-      type: xpath
-      value: "//*[@id=\"ConsultarNFe_Form\"]/table/tbody/tr[1]/td[2]/img"
-    key:
-      type: name
-      value: ctl00$ContentMain$tbxIdNFe
+

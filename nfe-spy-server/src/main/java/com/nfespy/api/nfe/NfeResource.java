@@ -1,4 +1,4 @@
-package com.nfespy.api;
+package com.nfespy.api.nfe;
 
 import static java.util.stream.Collectors.toList;
 
@@ -7,18 +7,17 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nfespy.config.StateConfigProperties;
-import com.nfespy.model.Nfe;
+import com.nfespy.entity.NfeEntity;
 import com.nfespy.queue.MongoQueue;
 import com.nfespy.service.NfeService;
 
-@RestController("/api/nfe")
+@RestController
 public class NfeResource {
 
 	@Autowired
@@ -27,10 +26,7 @@ public class NfeResource {
 	@Autowired
 	private NfeService nfeService;
 
-	@Autowired
-	private StateConfigProperties stateConfigProperties;
-
-	@PostMapping
+	@PostMapping("/api/nfe")
 	public ResponseEntity<NfeResponse> post(@RequestBody NfeRequest nfeRequest) {
 		final UUID lotId = nfeService.saveAll(nfeRequest.toModel());
 		mongoQueue.consume();
@@ -41,14 +37,14 @@ public class NfeResource {
 							 .body(nfeResponse);
 	}
 
-	@RequestMapping
-	public ResponseEntity<NfeResponse> getJson(@RequestParam(name = "key", required = false) String key, @RequestParam(name = "lotId", required = false) UUID lotId) {
-		final List<Nfe> nfes = nfeService.findByKeyOrLotId(key, lotId);
+	@GetMapping("/api/nfe")
+	public ResponseEntity<NfeResponse> get(@RequestParam(name = "key", required = false) String key, @RequestParam(name = "lotId", required = false) UUID lotId) {
+		final List<NfeEntity> nfeEntities = nfeService.findByKeyOrLotId(key, lotId);
 		NfeResponse nfeResponse = new NfeResponse();
 		nfeResponse.setLotId(lotId);
-		nfeResponse.setKeys(nfes.stream()
-								.map(Nfe::getKey)
-								.collect(toList()));
+		nfeResponse.setChaves(nfeEntities.stream()
+										 .map(NfeEntity::getChave)
+										 .collect(toList()));
 		return ResponseEntity.ok(nfeResponse);
 	}
 

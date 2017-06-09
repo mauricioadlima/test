@@ -1,0 +1,179 @@
+﻿@import url("common.css");
+
+div.pnlDadosNFe
+{
+    margin-left: 15%;
+    padding-top: 80px;
+    width: 70%;
+    min-width: 800px;
+}
+
+div.pnlDadosResumoNFe 
+{
+    padding: 10px;
+    border: solid 1px #000000;
+}
+
+.GeralXslt fieldset legend,
+.titulo-aba-interna,
+.titulo-aba,
+.TituloAreaRestrita,
+.TituloAreaRestrita2,
+.TituloAreaRestritacentro
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	height: 15px;
+	font-weight: bold;
+	color:#EC1616;
+	background-color:#F0F0F0;
+	text-align:left;
+    border-bottom:1px solid silver;
+    border-top:1px solid silver;
+}
+
+.TituloAreaRestritacentro
+{
+	font-size: 12px;
+	text-align:center;
+}
+
+.textoVerdana7,
+.textoVerdana7bold,
+.textoVerdana8,
+.textoVerdana8bold
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 7pt
+}
+
+.textoVerdana8,
+.textoVerdana8bold
+{
+    font-size: 8pt
+}
+
+.textoVerdana7bold,
+.textoVerdana8bold
+{
+    font-weight: bold;
+}
+
+.fixo-nfe-cpf-cnpj,
+.TextoFundoBrancoNegrito
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.botao_fechar
+{
+    position: absolute; 
+    top: 12px; 
+    left: 860px; 
+}
+
+.linhaCartaCorrecao,
+.box span
+{
+	color: #000000;
+    font-weight:normal;
+    border-top: 1px solid #333333;
+    border-top-color:#F0F5FB;   
+    border-left: 1px solid #333333; 
+    border-left-color :#F0F5FB;
+    background-color:#EEEEEE;
+    font-size: 10px;   
+    display:block;
+    background-position:center;
+}
+
+.jquery_tab_panel .header, 
+.header
+{
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+    width: 98%;
+}
+
+.jquery_tab_panel .table
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    width: 98%;
+}
+
+.jquery_tab_panel .ui-widget-content a
+{
+	color: #FF0000;
+}
+
+.jquery_tab_panel .table tr th
+{
+    color:#000000;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    text-align: left;
+}
+
+.jquery_tab_panel .table tr
+{
+    height: 15px;
+}
+
+.jquery_tab_panel .table tr td
+{
+    border-top: 1px solid #333333;
+    border-top-color:#F0F5FB;   
+    border-left: 1px solid #333333; 
+    border-left-color :#F0F5FB;
+    background-color:#EEEEEE;
+    font-size: 10px;   
+    background-position:center;
+    text-align: left;
+}
+
+.ajax__tab_panel .header
+{
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+    width: 98%;
+}
+
+.ajax__tab_panel .table
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    width: 98%;
+}
+
+.ajax__tab_panel .table tr th
+{
+    color:#000000;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    text-align: left;
+}
+
+.ajax__tab_panel .table tr
+{
+    height: 15px;
+}
+
+.ajax__tab_panel .table tr td
+{
+    border-top: 1px solid #333333;
+    border-top-color:#F0F5FB;   
+    border-left: 1px solid #333333; 
+    border-left-color :#F0F5FB;
+    background-color:#EEEEEE;
+    font-size: 10px;   
+    background-position:center;
+    text-align: left;
+}

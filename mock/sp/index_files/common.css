@@ -1,0 +1,211 @@
+﻿html, body
+{
+	height:100%;
+}
+
+body
+{
+	margin : 0em;
+	font-size: small;
+	font-family: Verdana, Arial;
+	text-align: center; /* Centralizar na horizontal no IE caso o site entre em Quirks mode */
+	height: 100%;
+}
+
+input[type=text], input[type=password], select, input[type=textarea]
+{
+	border-style:solid;
+	border-width:1px;
+}
+
+input[type=button], input[type=submit]
+{
+	border-style: solid;
+	border-width: 1px;
+	
+}
+
+a
+{
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 90%;
+	color: #FF0000;
+}
+
+/*input[type=text]:focus, input[type=password]:focus 
+{
+	background-color: #00CCFF;
+}
+
+select option[selected] : hover
+{
+	background-color: #00CCFF;
+}*/
+
+h1
+{
+	color: #999999;
+	font-size: 150%;
+}
+
+h2
+{
+	font-size: 150%;
+}
+
+.negrito 
+{
+    font-weight: bold;
+}
+
+.titleGray
+{
+	font-size:150%;color:#999999;
+}
+
+.paragrafoCentralizado
+{
+	position: relative; 
+	top: 40%; 
+	height:10; 
+	text-align:center;	
+}
+
+.bordaRedonda 
+{
+	-moz-border-radius-topleft: 0.4em;
+	-webkit-border-top-left-radius: 0.4em;
+	border-top-left-radius: 0.4em;
+    -moz-border-radius-topright: 0.4em;
+    -webkit-border-top-right-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    -moz-border-radius-bottomleft: 0.4em;
+    -webkit-border-bottom-left-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    -moz-border-radius-bottomright: 0.4em;
+    -webkit-border-bottom-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    
+}
+
+.panel 
+{
+    font-size:0.9em;
+    color: #333333;
+}
+
+.msgErro 
+{
+    font-size: 80%;
+    font-weight: bold;
+    color: Red;
+}
+
+#divHeader
+{
+	top:0em;
+	left:0em;
+	padding:0em;
+	height:9em;
+	width:100%;
+	border-bottom: 0.2em solid #000000;
+}
+
+#divTopImage
+{
+	top: 0;
+	padding: 0;
+	height:5em;
+	border-bottom: solid 0.1em;
+}
+
+@media screen
+{
+    #divTitle
+    {
+	    height: 3em;
+	    margin-top: 0.6em;
+    }
+    
+    #divHeader
+    {
+	    top:0em;
+	    left:0em;
+	    padding:0em;
+	    height:9em;
+	    width:100%;
+	    border-bottom: 0.2em solid #000000;
+    }
+
+    #divFooter
+    {
+	    padding: 0em;
+	    bottom: 0em; 
+	    left: 0em;
+	    height: 2.5em;
+	    width: 100%;
+	    vertical-align: text-top;
+	    text-align: center;
+	    background-color: #808080;
+	    color: #FFFFFF;
+    }
+}
+
+@media print
+{
+    #divTitle
+    {
+	    display: none;
+        visibility: hidden;
+    }
+    
+    #divHeader
+    {
+	    top:0em;
+	    left:0em;
+	    padding:0em;
+	    height:5em;
+	    width:100%;
+    }
+    
+    #divFooter
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+#divContent
+{
+	/*height:50em;*/
+	text-align: center;
+	z-index: 1000;
+}
+
+#frm 
+{
+    text-align: left;
+}
+
+#ConteudoPagina 
+{
+	margin: 1em;
+}
+
+#tabs 
+{
+	margin-top: 10%;
+	margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#ConsultarNFe_Form, #tabConsInut{
+    height: 250px;
+    background-color: #E5E5E5;
+	border: 1px solid #FF0000;
+}
