@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nfespy.entity.NfeEntity;
 import com.nfespy.queue.MongoQueue;
-import com.nfespy.service.NfeService;
+import com.nfespy.domain.NfeService;
 
 @RestController
 public class NfeResource {

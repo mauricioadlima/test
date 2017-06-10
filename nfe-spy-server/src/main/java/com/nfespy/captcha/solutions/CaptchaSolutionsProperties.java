@@ -1,4 +1,4 @@
-package com.nfespy.config;
+package com.nfespy.captcha.solutions;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

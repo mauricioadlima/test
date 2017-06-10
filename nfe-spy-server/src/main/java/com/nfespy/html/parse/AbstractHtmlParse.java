@@ -1,5 +1,7 @@
-package com.nfespy.site;
+package com.nfespy.html.parse;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -7,23 +9,25 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 import com.nfespy.config.GlobalProperties;
 import com.nfespy.config.StateProperties;
 import com.nfespy.config.StateTypeValue;
 import com.nfespy.domain.Nfe;
-import com.nfespy.exception.NfeException;
+import com.nfespy.driver.WebDriver;
+import com.nfespy.domain.NfeException;
 import com.nfespy.repository.StateRepository;
-import com.nfespy.service.CaptchaService;
+import com.nfespy.captcha.CaptchaService;
+import com.nfespy.html.HtmlService;
 
-abstract class AbstractHttpParse implements HttpParse {
+abstract class AbstractHtmlParse implements HtmlParse {
 
 	private static final String IMAGE = "imagem";
 
@@ -33,7 +37,7 @@ abstract class AbstractHttpParse implements HttpParse {
 
 	private static final String SEARCH = "consultar";
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractHttpParse.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractHtmlParse.class);
 
 	@Autowired
 	private StateProperties stateProperties;
@@ -42,23 +46,25 @@ abstract class AbstractHttpParse implements HttpParse {
 	private GlobalProperties globalProperties;
 
 	@Autowired
-	@Qualifier("tesseractService")
-	private CaptchaService captchaService;
-
-	@Autowired
 	private StateRepository stateRepository;
 
 	@Autowired
-	private com.nfespy.driver.WebDriver webDriverFactory;
+	private WebDriver webDriverFactory;
+
+	@Autowired
+	private HtmlService htmlService;
+
+	private CaptchaService captchaService;
 
 	private String estado;
 
-	AbstractHttpParse(final String estado) {
+	AbstractHtmlParse(final String estado, CaptchaService captchaService) {
+		this.captchaService = captchaService;
 		this.estado = estado;
 	}
 
-	WebDriver getDriver() {
-		WebDriver driver = webDriverFactory.getDriver();
+	private RemoteWebDriver getDriver() {
+		RemoteWebDriver driver = webDriverFactory.getDriver();
 		driver.manage()
 			  .timeouts()
 			  .implicitlyWait(1, TimeUnit.SECONDS);
@@ -71,7 +77,7 @@ abstract class AbstractHttpParse implements HttpParse {
 																.get(estado);
 		final Map<String, StateTypeValue> fields = stateProperties.getFields()
 																  .get(estado);
-		WebDriver driver = getDriver();
+		final RemoteWebDriver driver = getDriver();
 		try {
 			final String url = stateRepository.findOne(estado)
 											  .getUrl();
@@ -83,7 +89,8 @@ abstract class AbstractHttpParse implements HttpParse {
 
 			final WebElement image = driver.findElement(choiceFindBy(form.get(IMAGE)));
 			final String src = image.getAttribute("src");
-			final String captchaValue = captchaService.solve(src);
+
+			final String captchaValue = solve(src, getSessionId(driver));
 
 			final WebElement captcha = driver.findElement(choiceFindBy(form.get(CAPTCHA)));
 			captcha.sendKeys(captchaValue);
@@ -101,7 +108,25 @@ abstract class AbstractHttpParse implements HttpParse {
 
 	}
 
-	Nfe parse(Map<String, StateTypeValue> fields, WebDriver webDriver) {
+	@Override
+	public String getSessionId(final RemoteWebDriver driver) {
+		String sessionKey = "ASP.NET_SessionId";
+		final Cookie cookie = driver.manage()
+									.getCookieNamed(sessionKey);
+		return "ASP.NET_SessionId=" + cookie.getValue();
+	}
+
+	private String solve(String url, String sessionId) {
+		try {
+			File out = File.createTempFile("image", null);
+			htmlService.download(url, out, sessionId);
+			return captchaService.solve(out);
+		} catch (IOException e) {
+			throw new NfeException("Error on create tmp file", e);
+		}
+	}
+
+	private Nfe parse(Map<String, StateTypeValue> fields, RemoteWebDriver webDriver) {
 		Nfe nfe = new Nfe();
 		fields.forEach((k, v) -> {
 			try {

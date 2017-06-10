@@ -1,4 +1,4 @@
-package com.nfespy.service;
+package com.nfespy.domain;
 
 import static com.nfespy.entity.NfeEntity.Status.ERROR;
 import static com.nfespy.entity.NfeEntity.Status.FAIL;
@@ -15,10 +15,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import com.nfespy.domain.Nfe;
 import com.nfespy.entity.NfeEntity;
 import com.nfespy.repository.NfeRepository;
-import com.nfespy.site.HttpParse;
+import com.nfespy.html.parse.HtmlParse;
 
 @Service
 public class NfeService {
@@ -59,8 +58,8 @@ public class NfeService {
 		}
 	}
 
-	private HttpParse getHttpService(String state) {
-		return (HttpParse) applicationContext.getAutowireCapableBeanFactory()
+	private HtmlParse getHttpService(String state) {
+		return (HtmlParse) applicationContext.getAutowireCapableBeanFactory()
 											 .getBean(state);
 	}
 

@@ -1,8 +1,9 @@
-package com.nfespy.site;
+package com.nfespy.html.parse;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.nfespy.domain.Nfe;
+import com.nfespy.entity.StateEntity;
 import com.nfespy.repository.StateRepository;
 
 @RunWith(SpringRunner.class)
@@ -21,6 +23,12 @@ public class SaoPauloTest {
 
 	@Autowired
 	private StateRepository stateRepository;
+
+	@Before
+	public void before() {
+		StateEntity stateEntity = new StateEntity("sp", "https://nfe.fazenda.sp.gov.br/consultanfe/consulta/publica/consultarnfe.aspx");
+		stateRepository.save(stateEntity);
+	}
 
 	@Test
 	public void getNfe() {

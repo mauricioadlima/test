@@ -1,7 +1,9 @@
 package com.nfespy.driver;
 
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 @FunctionalInterface
 public interface WebDriver {
 
-	org.openqa.selenium.WebDriver getDriver();
+	RemoteWebDriver getDriver();
 }

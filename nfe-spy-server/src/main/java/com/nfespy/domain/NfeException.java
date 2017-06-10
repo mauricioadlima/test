@@ -1,4 +1,4 @@
-package com.nfespy.exception;
+package com.nfespy.domain;
 
 public class NfeException extends RuntimeException {
 

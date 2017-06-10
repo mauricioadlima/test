@@ -1,21 +1,30 @@
-package com.nfespy.service;
+package com.nfespy.captcha.tesseract;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nfespy.exception.TesseractException;
+import com.nfespy.captcha.CaptchaService;
 
-@Service
+@Service("tesseract")
 public class TesseractService implements CaptchaService {
 
-	@Autowired
-	private HtmlService htmlService;
+	@Override
+	public String solve(final String image) {
+		try {
+			final Path path = Files.createTempFile("image-", null);
+			Files.write(path, image.getBytes());
+			return solve(path.toFile());
+		} catch (IOException e) {
+			throw new TesseractException(e);
+		}
+	}
 
+	@Override
 	public String solve(File image) {
 		try {
 			File tmp = File.createTempFile("tesseract-", null);
@@ -30,21 +39,10 @@ public class TesseractService implements CaptchaService {
 				Thread.sleep(1000);
 				count++;
 			} while (count < 3);
-		} catch (InterruptedException | IOException ex) {
-			throw new TesseractException("Tesseract cannot be read image", ex);
+		} catch (InterruptedException | IOException e) {
+			throw new TesseractException(e);
 		}
-		throw new TesseractException("Tesseract cannot be read image");
+		throw new TesseractException();
 	}
 
-	@Override
-	public String solve(final String urlOrImage) {
-		try {
-			final File captcha = File.createTempFile("captcha", null);
-			htmlService.download(urlOrImage, captcha);
-			return solve(captcha);
-		} catch (IOException e) {
-			throw new TesseractException("Tesseract cannot be read image", e);
-		}
-
-	}
 }

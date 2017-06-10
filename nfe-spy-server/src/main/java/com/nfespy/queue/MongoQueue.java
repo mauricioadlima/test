@@ -14,7 +14,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.nfespy.entity.NfeEntity;
-import com.nfespy.service.NfeService;
+import com.nfespy.domain.NfeService;
 
 @Component
 public class MongoQueue {

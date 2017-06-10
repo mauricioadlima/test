@@ -1,6 +1,5 @@
 package com.nfespy.driver;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
@@ -24,7 +23,7 @@ public class WebDriverFactory {
 
 	@Bean
 	@Profile("production")
-	public com.nfespy.driver.WebDriver productionDriver(GlobalProperties globalProperties) {
+	public WebDriver productionDriver(GlobalProperties globalProperties) {
 		System.setProperty(PHANTOMJS_BINARY_PATH, globalProperties.getPhantomjsBinary());
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setJavascriptEnabled(true);
@@ -34,7 +33,7 @@ public class WebDriverFactory {
 
 	@Bean
 	@Profile("test")
-	public com.nfespy.driver.WebDriver testDriver(GlobalProperties globalProperties) {
+	public WebDriver testDriver(GlobalProperties globalProperties) {
 		System.setProperty(CHROME_BINARY_PATH, globalProperties.getChromeBinary());
 		return ChromeDriver::new;
 	}
