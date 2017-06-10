@@ -61,4 +61,10 @@ public class Nfe {
 	public void setDataSaidaOuEntrada(final String dataSaidaOuEntrada) {
 		this.dataSaidaOuEntrada = dataSaidaOuEntrada;
 	}
+
+	@Override
+	public String toString() {
+		return "Nfe{" + "modelo='" + modelo + '\'' + ", serie='" + serie + '\'' + ", numero='" + numero + '\'' + ", dataEmissao='" + dataEmissao + '\'' + ", dataSaidaOuEntrada='" + dataSaidaOuEntrada + '\''
+				+ ", valorTotal='" + valorTotal + '\'' + '}';
+	}
 }

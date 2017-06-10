@@ -13,10 +13,10 @@ class NfeRequest {
 	private static final class NfeRequestProperty {
 
 		@JsonProperty
-		private String chave;
+		private String key;
 
 		@JsonProperty
-		private String estado;
+		private String state;
 	}
 
 	@JsonProperty
@@ -26,7 +26,7 @@ class NfeRequest {
 		return nfes == null ?
 				EMPTY_LIST :
 				nfes.parallelStream()
-					.map(p -> new NfeEntity(p.chave, p.estado))
+					.map(p -> new NfeEntity(p.key, p.state))
 					.collect(toList());
 	}
 }

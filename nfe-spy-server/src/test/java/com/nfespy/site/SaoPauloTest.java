@@ -3,20 +3,14 @@ package com.nfespy.site;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import java.util.Map;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.nfespy.config.EstadoTipoValor;
-import com.nfespy.config.EstadoProperties;
 import com.nfespy.domain.Nfe;
+import com.nfespy.repository.StateRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -26,28 +20,11 @@ public class SaoPauloTest {
 	private SaoPaulo saoPaulo;
 
 	@Autowired
-	private EstadoProperties estadoProperties;
-
-	private WebDriver driver;
-
-	@Before
-	public void before() {
-		driver = saoPaulo.getDriver();
-		driver.navigate()
-			  .to("http://localhost:8888/sp/index.html");
-	}
-
-	@After
-	public void after() {
-		driver.close();
-	}
+	private StateRepository stateRepository;
 
 	@Test
 	public void getNfe() {
-		final Map<String, EstadoTipoValor> fields = estadoProperties.getCampos()
-																	.get("sp");
-
-		final Nfe nfe = saoPaulo.parse(fields, driver);
+		final Nfe nfe = saoPaulo.getNfe("35170560627429000135550020011701121473193288");
 		assertNotNull(nfe);
 		assertEquals("55", nfe.getModelo());
 		assertEquals("2", nfe.getSerie());

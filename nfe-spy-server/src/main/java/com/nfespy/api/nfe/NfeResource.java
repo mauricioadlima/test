@@ -42,9 +42,9 @@ public class NfeResource {
 		final List<NfeEntity> nfeEntities = nfeService.findByKeyOrLotId(key, lotId);
 		NfeResponse nfeResponse = new NfeResponse();
 		nfeResponse.setLotId(lotId);
-		nfeResponse.setChaves(nfeEntities.stream()
-										 .map(NfeEntity::getChave)
-										 .collect(toList()));
+		nfeResponse.setKeys(nfeEntities.stream()
+									   .map(NfeEntity::toString)
+									   .collect(toList()));
 		return ResponseEntity.ok(nfeResponse);
 	}
 

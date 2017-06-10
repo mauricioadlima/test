@@ -1,0 +1,48 @@
+fields:
+  sp:
+    modelo:
+      type: xpath
+      value: "//*[@id=\"NFe\"]/fieldset[1]/table/tbody/tr/td[1]/span"
+    serie:
+      type: xpath
+      value: "//*[@id=\"NFe\"]/fieldset[1]/table/tbody/tr/td[2]/span"
+    numero:
+      type: xpath
+      value: "//*[@id=\"NFe\"]/fieldset[1]/table/tbody/tr/td[3]/span"
+    dataEmissao:
+      type: xpath
+      value: "//*[@id=\"NFe\"]/fieldset[1]/table/tbody/tr/td[4]/span"
+    dataSaidaOuEntrada:
+      type: xpath
+      value: "//*[@id=\"NFe\"]/fieldset[1]/table/tbody/tr/td[5]/span"
+    valorTotal:
+      type: xpath
+      value: "//*[@id=\"NFe\"]/fieldset[1]/table/tbody/tr/td[6]/span"
+
+forms:
+  nacional:
+    consultar:
+      type: id
+      value: ctl00$ContentPlaceHolder1$btnConsultar
+    captcha:
+      type: id
+      value: ctl00_ContentPlaceHolder1_txtCaptcha
+    imagem:
+      type: id
+      value: ctl00_ContentPlaceHolder1_imgCaptcha
+    chave:
+      type: id
+      value: ctl00_ContentPlaceHolder1_txtChaveAcessoCompleta
+  sp:
+    consultar:
+      type: name
+      value: ctl00$ContentMain$btnConsultaCompleta
+    captcha:
+      type: name
+      value: ctl00$ContentMain$tbxCaptcha
+    imagem:
+      type: xpath
+      value: "//*[@id=\"ConsultarNFe_Form\"]/table/tbody/tr[1]/td[2]/img"
+    chave:
+      type: name
+      value: ctl00$ContentMain$tbxIdNFe

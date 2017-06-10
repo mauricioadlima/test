@@ -12,28 +12,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nfespy.entity.EstadoEntity;
-import com.nfespy.repository.EstadoRepository;
+import com.nfespy.entity.StateEntity;
+import com.nfespy.repository.StateRepository;
 
 @RestController
 public class StateResource {
 
 	@Autowired
-	private EstadoRepository estadoRepository;
+	private StateRepository stateRepository;
 
 	@PostMapping("/api/config/state")
 	public StateRequestResponse post(@RequestBody StateRequestResponse stateRequestResponse) {
-		final EstadoEntity estadoEntity = estadoRepository.save(stateRequestResponse.toModel());
-		return new StateRequestResponse(estadoEntity);
+		final StateEntity stateEntity = stateRepository.save(stateRequestResponse.toModel());
+		return new StateRequestResponse(stateEntity);
 	}
 
 	@GetMapping("/api/config/state")
 	public ResponseEntity get(@RequestParam(name = "state", required = false) String stateId) {
 		if (stateId != null) {
-			final EstadoEntity estadoEntity = estadoRepository.findOne(stateId);
-			return ResponseEntity.ok(new StateRequestResponse(estadoEntity));
+			final StateEntity stateEntity = stateRepository.findOne(stateId);
+			return ResponseEntity.ok(new StateRequestResponse(stateEntity));
 		}
-		final List<EstadoEntity> estadoEntities = estadoRepository.findAll();
+		final List<StateEntity> estadoEntities = stateRepository.findAll();
 		return ResponseEntity.ok(estadoEntities.stream()
 											   .map(StateRequestResponse::new)
 											   .collect(toList()));

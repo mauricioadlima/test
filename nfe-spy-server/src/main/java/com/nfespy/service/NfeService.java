@@ -1,8 +1,8 @@
 package com.nfespy.service;
 
-import static com.nfespy.entity.NfeEntity.Status.ERRO;
-import static com.nfespy.entity.NfeEntity.Status.FALHA;
-import static com.nfespy.entity.NfeEntity.Status.PROCESSADA;
+import static com.nfespy.entity.NfeEntity.Status.ERROR;
+import static com.nfespy.entity.NfeEntity.Status.FAIL;
+import static com.nfespy.entity.NfeEntity.Status.PROCESSED;
 
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import com.nfespy.domain.Nfe;
 import com.nfespy.entity.NfeEntity;
 import com.nfespy.repository.NfeRepository;
-import com.nfespy.site.HttpService;
+import com.nfespy.site.HttpParse;
 
 @Service
 public class NfeService {
@@ -35,32 +35,33 @@ public class NfeService {
 
 	@Async
 	public void processNfe(NfeEntity nfeEntity) {
-		LOGGER.info("Processing nfeEntity {}", nfeEntity.getChave());
+		LOGGER.info("Processing nfeEntity {}", nfeEntity.getKey());
 		try {
-			Nfe nfe = getHttpService(nfeEntity.getEstado()).getNfe(nfeEntity.getChave());
+			Nfe nfe = getHttpService(nfeEntity.getState()).getNfe(nfeEntity.getKey());
 			if (nfe == null) {
-				nfe = getHttpService(NACIONAL).getNfe(nfeEntity.getChave());
+				nfe = getHttpService(NACIONAL).getNfe(nfeEntity.getKey());
 			}
 
 			if (nfe != null) {
-				nfeEntity.setStatus(PROCESSADA);
-				LOGGER.info("NfeEntity {} processed with successful", nfeEntity.getChave());
+				nfeEntity.setStatus(PROCESSED);
+				nfeEntity.setNfe(nfe);
+				LOGGER.info("NfeEntity {} processed with successful", nfeEntity.getKey());
 			} else {
-				LOGGER.error("NfeEntity {} cannot be processed", nfeEntity.getChave());
-				nfeEntity.setStatus(FALHA);
+				LOGGER.error("NfeEntity {} cannot be processed", nfeEntity.getKey());
+				nfeEntity.setStatus(FAIL);
 			}
 
 		} catch (Exception ex) {
-			nfeEntity.setStatus(ERRO);
-			LOGGER.error("NfeEntity {} processed with error", nfeEntity.getChave(), ex);
+			nfeEntity.setStatus(ERROR);
+			LOGGER.error("NfeEntity {} processed with error", nfeEntity.getKey(), ex);
 		} finally {
 			nfeRepository.save(nfeEntity);
 		}
 	}
 
-	private HttpService getHttpService(String state) {
-		return (HttpService) applicationContext.getAutowireCapableBeanFactory()
-											   .getBean(state);
+	private HttpParse getHttpService(String state) {
+		return (HttpParse) applicationContext.getAutowireCapableBeanFactory()
+											 .getBean(state);
 	}
 
 	public UUID saveAll(final List<NfeEntity> nfeEntities) {
@@ -74,7 +75,7 @@ public class NfeService {
 		if (key != null) {
 			return Collections.singletonList(nfeRepository.findOne(key));
 		}
-		return nfeRepository.findByLotIdAndStatus(lotId, PROCESSADA);
+		return nfeRepository.findByLotIdAndStatus(lotId, PROCESSED);
 	}
 
 }

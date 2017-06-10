@@ -15,27 +15,14 @@ captchasolutions:
   secret: 6350214c
 
 management:
-  context-path: "/actuator"
   security:
-    enabled: true
+    enabled: false
 
 spring:
-  application:
-    name: "@pom.artifactId@"
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
   profiles:
-    active: "production"
-
-security:
-  basic:
-    enabled: true
-    path: /**
-  user:
-    name: admin
-    password: pass
-  enable-csrf: false
-  role: USER
+    active: "test"
 
 

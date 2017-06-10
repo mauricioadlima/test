@@ -14,13 +14,13 @@ class NfeResponse {
 	private UUID lotId;
 
 	@JsonProperty
-	private List<String> chaves;
+	private List<String> keys;
 
 	void setLotId(final UUID lotId) {
 		this.lotId = lotId;
 	}
 
-	void setChaves(final List<String> chaves) {
-		this.chaves = chaves;
+	void setKeys(final List<String> keys) {
+		this.keys = keys;
 	}
 }

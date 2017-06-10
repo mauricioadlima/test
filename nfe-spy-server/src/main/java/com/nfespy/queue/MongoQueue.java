@@ -1,7 +1,7 @@
 package com.nfespy.queue;
 
-import static com.nfespy.entity.NfeEntity.Status.PROCESSANDO;
-import static com.nfespy.entity.NfeEntity.Status.ESPERANDO;
+import static com.nfespy.entity.NfeEntity.Status.PROCESSING;
+import static com.nfespy.entity.NfeEntity.Status.WAITING;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,13 +30,13 @@ public class MongoQueue {
 	@Async
 	public void consume() {
 		final Query query = Query.query(Criteria.where("status")
-												.is(ESPERANDO));
+												.is(WAITING));
 
-		final Update update = Update.update("status", PROCESSANDO);
+		final Update update = Update.update("status", PROCESSING);
 		while (true) {
 			final NfeEntity nfeEntity = mongoTemplate.findAndModify(query, update, NfeEntity.class);
 			if (nfeEntity != null) {
-				LOGGER.debug("Consumindo chave: {}", nfeEntity.getChave());
+				LOGGER.debug("Consumindo chave: {}", nfeEntity.getKey());
 				nfeService.processNfe(nfeEntity);
 			} else {
 				LOGGER.debug("Todas as mensagens foram consumidas");
