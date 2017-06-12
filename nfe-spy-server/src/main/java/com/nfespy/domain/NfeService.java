@@ -3,6 +3,8 @@ package com.nfespy.domain;
 import static com.nfespy.entity.NfeEntity.Status.ERROR;
 import static com.nfespy.entity.NfeEntity.Status.FAIL;
 import static com.nfespy.entity.NfeEntity.Status.PROCESSED;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.newAggregation;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,12 +14,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.GroupOperation;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.nfespy.entity.NfeEntity;
-import com.nfespy.repository.NfeRepository;
 import com.nfespy.html.parse.HtmlParse;
+import com.nfespy.repository.NfeRepository;
 
 @Service
 public class NfeService {
@@ -31,6 +36,9 @@ public class NfeService {
 
 	@Autowired
 	private ApplicationContext applicationContext;
+
+	@Autowired
+	private MongoTemplate mongoTemplate;
 
 	@Async
 	public void processNfe(NfeEntity nfeEntity) {
@@ -75,6 +83,14 @@ public class NfeService {
 			return Collections.singletonList(nfeRepository.findOne(key));
 		}
 		return nfeRepository.findByLotIdAndStatus(lotId, PROCESSED);
+	}
+
+	public List<NfeStatusReport> getAllGroupedByStatus() {
+		GroupOperation groupOperation = group("status", "lotId").count()
+																.as("total");
+
+		AggregationResults<NfeStatusReport> aggregate = mongoTemplate.aggregate(newAggregation(groupOperation), "nfes", NfeStatusReport.class);
+		return aggregate.getMappedResults();
 	}
 
 }

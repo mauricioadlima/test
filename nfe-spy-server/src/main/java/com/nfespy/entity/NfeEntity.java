@@ -2,6 +2,9 @@ package com.nfespy.entity;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,12 +18,16 @@ public class NfeEntity {
 	}
 
 	@Id
+	@NotEmpty
 	private String key;
 
+	@NotNull
 	private UUID lotId;
 
+	@NotNull
 	private Status status = Status.WAITING;
 
+	@NotEmpty
 	private String state;
 
 	private Nfe nfe;
@@ -32,6 +39,10 @@ public class NfeEntity {
 
 	public void setLotId(final UUID lotId) {
 		this.lotId = lotId;
+	}
+
+	public UUID getLotId() {
+		return lotId;
 	}
 
 	public String getKey() {

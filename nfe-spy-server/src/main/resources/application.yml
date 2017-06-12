@@ -18,6 +18,10 @@ management:
   context-path: "/actuator"
   security:
     enabled: true
+  management:
+    health:
+      mongo:
+        enabled: true
 
 spring:
   application:

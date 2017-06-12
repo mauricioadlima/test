@@ -36,10 +36,10 @@ public class MongoQueue {
 		while (true) {
 			final NfeEntity nfeEntity = mongoTemplate.findAndModify(query, update, NfeEntity.class);
 			if (nfeEntity != null) {
-				LOGGER.debug("Consumindo chave: {}", nfeEntity.getKey());
+				LOGGER.debug("Consuming message: {}", nfeEntity.getKey());
 				nfeService.processNfe(nfeEntity);
 			} else {
-				LOGGER.debug("Todas as mensagens foram consumidas");
+				LOGGER.debug("All messages are consumed");
 				break;
 			}
 		}

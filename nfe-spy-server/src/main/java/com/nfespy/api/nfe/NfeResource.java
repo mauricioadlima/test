@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.nfespy.domain.NfeService;
+import com.nfespy.domain.NfeStatusReport;
 import com.nfespy.entity.NfeEntity;
 import com.nfespy.queue.MongoQueue;
-import com.nfespy.domain.NfeService;
 
 @RestController
 public class NfeResource {
@@ -46,6 +47,12 @@ public class NfeResource {
 									   .map(NfeEntity::toString)
 									   .collect(toList()));
 		return ResponseEntity.ok(nfeResponse);
+	}
+
+	@GetMapping("/api/nfe/status")
+	public ResponseEntity<List<NfeStatusReport>> status() {
+		final List<NfeStatusReport> statusReports = nfeService.getAllGroupedByStatus();
+		return ResponseEntity.ok(statusReports);
 	}
 
 }

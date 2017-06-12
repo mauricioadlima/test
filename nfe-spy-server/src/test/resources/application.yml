@@ -1,6 +1,6 @@
 logging:
   level:
-    ROOT: INFO
+    ROOT: DEBUG
 
 async:
   max-pool-size: 200
@@ -23,6 +23,8 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
   profiles:
-    active: "test"
+    active: "test
+
+    "
 
 
