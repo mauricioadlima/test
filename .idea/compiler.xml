@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mixconnector-server" />
         <module name="nfe-spy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mixconnector-server" target="1.8" />
       <module name="nfe-spy" target="1.8" />
     </bytecodeTargetLevel>
   </component>

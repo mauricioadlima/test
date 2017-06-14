@@ -1,0 +1,177 @@
+fields:
+  sp:
+    modelo:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[1]/table/tbody/tr/td[1]/span
+    serie:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[1]/table/tbody/tr/td[2]/span
+    numero:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[1]/table/tbody/tr/td[3]/span
+    dataEmissao:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[1]/table/tbody/tr/td[4]/span
+    dataSaidaOuEntrada:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[1]/table/tbody/tr/td[5]/span
+    valorTotal:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[1]/table/tbody/tr/td[6]/span
+    dataAutorizacao:
+      type: xpath
+      value: //*[@id="NFe"]/fieldset[5]/table/tbody/tr[2]/td[3]/span
+    dataInclusao:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[5]/table/tbody/tr[2]/td[4]/span
+    digest:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr[2]/td[4]/span
+    eventosNfe:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[5]/table/tbody/tr[2]/td/span
+    finalidade:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr/td[4]/span
+    formaPagamento:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr[2]/td[3]/span
+    naturezaOperacao:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr[2]/td/span
+    processo:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr/td/span
+    protocolo:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[5]/table/tbody/tr[2]/td[2]/span
+    tipoEmissao:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr/td[3]/span
+    tipoOperacao:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr[2]/td[2]/span
+    versaoProcesso:
+        type: xpath
+        value: //*[@id="NFe"]/fieldset[4]/table/tbody/tr/td[2]/span
+    emitente:
+        bairro:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[3]/td/span
+        cep:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[3]/td[2]/span
+        cnae:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[8]/td[1]/span
+        cnpj:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[2]/td/span
+        codigoRegimeTributario:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[8]/td[2]/span
+        endereco:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[2]/td[2]/span
+        inscricaoEstadual:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[6]/td/span
+        inscricaoMunicipal:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[7]/td[1]/span
+        municipio:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[4]/td/span
+        municipioOcorrencia:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[7]/td[2]/span
+        nomeFantasia:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr/td[2]/span
+        pais:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[5]/td[2]/span
+        razaoSocial:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr/td/span
+        telefone:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[4]/td[2]/span
+        uf:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[5]/td/span
+        inscriçãoEstadualSubstitutoTributário:
+            type: xpath
+            value: //*[@id="Emitente"]/fieldset/table/tbody/tr[6]/td[2]/span
+    destinatario:
+        bairro:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[3]/td/span
+        cep:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[3]/td[2]/span
+        cpf:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[2]/td/span
+        email:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[7]/td[2]/span
+        endereco:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[2]/td[2]/span
+        im:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[7]/td[1]/span
+        indicadorIE:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[6]/td/span
+        inscricaoEstadual:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[6]/td[2]/span
+        inscricaoSuframa:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[6]/td[3]/span
+        municipio:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[4]/td/span
+        pais:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[5]/td[2]/span
+        razaoSocial:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr/td/span
+        telefone:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[4]/td[2]/span
+        uf:
+            type: xpath
+            value: //*[@id="DestRem"]/fieldset/table/tbody/tr[5]/td/span
+
+
+forms:
+  nacional:
+    consultar:
+      type: id
+      value: ctl00$ContentPlaceHolder1$btnConsultar
+    captcha:
+      type: id
+      value: ctl00_ContentPlaceHolder1_txtCaptcha
+    imagem:
+      type: id
+      value: ctl00_ContentPlaceHolder1_imgCaptcha
+    chave:
+      type: id
+      value: ctl00_ContentPlaceHolder1_txtChaveAcessoCompleta
+  sp:
+    consultar:
+      type: name
+      value: ctl00$ContentMain$btnConsultaCompleta
+    captcha:
+      type: name
+      value: ctl00$ContentMain$tbxCaptcha
+    imagem:
+      type: xpath
+      value: "//*[@id=\"ConsultarNFe_Form\"]/table/tbody/tr[1]/td[2]/img"
+    chave:
+      type: name
+      value: ctl00$ContentMain$tbxIdNFe

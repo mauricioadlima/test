@@ -1,0 +1,26 @@
+logging:
+  level:
+    ROOT: INFO
+
+async:
+  max-pool-size: 200
+  core-pool-size: 10
+
+phantomjs-binary: /opt/phantomjs-2.1.1-linux-x86_64/bin/phantomjs
+chrome-binary: /opt/chromedriver
+
+captchasolutions:
+  url: http://api.captchasolutions.com/solve
+  key: 82b050b284452aa843c590d093ef53d4
+  secret: 6350214c
+
+management:
+  security:
+    enabled: false
+
+spring:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  profiles:
+    active: "test"
